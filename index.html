@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror Mirror - Roast Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Mirror Mirror</h1>
+            <p class="subtitle">Who's the most roasted of them all?</p>
+        </header>
+        
+        <main class="main-content">
+            <div class="camera-container">
+                <video id="camera" autoplay muted playsinline></video>
+                <div class="camera-overlay">
+                    <div class="loading" id="loading">
+                        <div class="spinner"></div>
+                        <p>Accessing camera...</p>
+                    </div>
+                    <div class="error" id="error" style="display: none;">
+                        <p>Camera access denied or unavailable</p>
+                        <button onclick="requestCamera()" class="retry-btn">Try Again</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="roast-container">
+                <div class="roast-text" id="roastText">
+                    Preparing your personalized roast...
+                </div>
+                <div class="roast-timer">
+                    <div class="timer-bar" id="timerBar"></div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>All roasts are served with love (and a grain of salt) 💖</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
